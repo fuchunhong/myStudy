@@ -31,7 +31,7 @@ public class Demo {
     public RestResponse<List<Testing>> ceshi(@RequestParam("age") String age){
 
         List<Testing> testing = this.testingService.getTesting(age);
-
+        System.out.println("哈哈哈");
         return RestResponse.success(testing);
 
     }
