@@ -1,0 +1,32 @@
+spring:
+ application:
+  name: restaurant-service
+
+ druid:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/restaurant?characterEncoding=UTF-8&allowMultiQueries=true
+  maxActive: 30
+  minIdle: 5
+  maxWait: 10000
+  validationQuery: SELECT 'x'
+  username: root
+  password: mysql
+
+server:
+ port: 8180
+
+logging:
+ config: classpath:log4j2.xml
+ write:
+  level: TRACE
+ format:
+  style: http
+
+flyway:
+ locations: classpath:db/migration
+ user: root
+ password: mysql
+ schemas: restaurant
+ baseline-on-migrate: true
+ url: jdbc:mysql://localhost:3306/restaurant?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=true
+

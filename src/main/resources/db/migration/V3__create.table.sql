@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS `dada`;
+
+CREATE TABLE `dada` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `name` varchar(20) NOT NULL COMMENT 'EVENT NAME',
+  `create_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP  COMMENT 'create_date',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
